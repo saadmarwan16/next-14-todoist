@@ -2,14 +2,11 @@
 
 import { useRouter } from "next/navigation";
 import { type FC } from "react";
+import type { Todo } from "~/lib/interfaces";
 import { api } from "~/trpc/react";
 
 interface TodosProp {
-  todos: {
-    title: string;
-    id: string;
-    timestamp: string;
-}[];
+  todos: Todo[];
 }
 
 const Todos: FC<TodosProp> = ({ todos }) => {

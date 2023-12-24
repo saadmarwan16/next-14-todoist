@@ -5,5 +5,3 @@ import { env } from '~/env';
 const client = createClient({ url: env.DATABASE_URL, authToken: env.DATABASE_AUTH_TOKEN });
 
 export const db = drizzle(client);
-
-// const result = await db.select().from(users).all()
