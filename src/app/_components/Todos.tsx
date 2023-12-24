@@ -21,7 +21,7 @@ const Todos: FC<TodosProp> = ({ todos }) => {
     <main className="flex max-w-5xl basis-3/5 flex-col gap-4 p-16">
       <h3 className="text-3xl">Todoist Prisma</h3>
 
-      {todos.length === 0 ? (
+      {todos?.length === 0 ? (
         <div className="px-6 pt-32 text-center text-2xl">
           No todo items available
         </div>
