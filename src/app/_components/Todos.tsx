@@ -1,12 +1,15 @@
 "use client";
 
-import type { Post } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { type FC } from "react";
 import { api } from "~/trpc/react";
 
 interface TodosProp {
-  todos: Post[];
+  todos: {
+    title: string;
+    id: string;
+    timestamp: string;
+}[];
 }
 
 const Todos: FC<TodosProp> = ({ todos }) => {
